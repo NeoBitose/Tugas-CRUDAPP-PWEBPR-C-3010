@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form</title>
-  <link rel="stylesheet" href="../resource/css/form-auth.css">
+  <title>Registrasi User</title>
+  <link rel="stylesheet" href="/public/css/form-auth.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
           <h1 class="title-form">Selamat Datang!</h1>
           <span>Silahkan register akun anda</span>
         </div>
-        <div class="flex"><a href="../view/login.php"><hr class="hr-grey"></a><hr class="hr-violet"></div>
+        <div class="flex"><a href="/view/login.php"><hr class="hr-grey"></a><hr class="hr-violet"></div>
         <div class="main-form">
           <div class="email input">
             <label class="label" for="email">Email</label>
@@ -36,13 +36,12 @@
           <button type="submit" class="btn-form">Submit</button>
         </div> 
         <div class="footer-form">
-          <p>Sudah punya akun ? <a href="../view/login.php">Masuk</a></p>
+          <p>Sudah punya akun ? <a href="/view/login.php">Masuk</a></p>
         </div>
       </form>
     </div>
   </div>
 
 </body>
-<script src="../resource/js/form-auth.js"></script>
 
 </html>
