@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <div class="cover">
-      <form name="form-registrasi" action="#" method="post" onsubmit="return validateRegis()" class="form">
+      <form name="form-registrasi" action="/view/dasboard.php" method="post" onsubmit="return validateRegis()" class="form">
         <div class="head-form">
           <h1 class="title-form">Selamat Datang!</h1>
           <span>Silahkan register akun anda</span>

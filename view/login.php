@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <div class="cover">
-      <form name="form-login" action="#" method="post" onsubmit="return validateLogin()" class="form">
+      <form name="form-login" action="/view/dasboard.php" method="post" onsubmit="return validateLogin()" class="form">
         <div class="head-form">
           <h1 class="title-form">Selamat Datang Kembali!</h1>
           <span>Silahkan masuk ke akun anda</span>
