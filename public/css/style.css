@@ -1,7 +1,10 @@
-*{
+ *{
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+}
+button:hover{
+  scale: 1.05;
 }
 .flex{
   display: flex;
@@ -45,7 +48,7 @@
   height: 80px;
 }
 .title-nav h2 {
-  color: black;
+  color: #0B242F;
   font-weight: 600;
 }
 .nav{
@@ -65,9 +68,15 @@
   margin: 12px 0px;
   border-radius: 5px;
 }
+.nav li:hover i path{
+  fill: #5E72E4;
+}
+.nav li:hover a{
+  color: #5E72E4;
+}
 .nav a{
   text-decoration: none;
-  color: black;
+  color: #0B242F;
   font-size: 16px;
   font-weight: 500;
   display: flex;
@@ -88,7 +97,7 @@
 .active i path{
   fill: #5E72E4;
 }
-.active .nav a{
+.active a{
   color: #5E72E4;
 } 
 .footer-nav{
@@ -115,8 +124,29 @@
   width: calc(100vw - 390px);
   height: 80px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head-board .left, .right{
+  width: 50%;
+}
+.head-board .right{
+  display: flex;
   justify-content: end;
   align-items: center;
+}
+.head-board .search{
+  width: 350px;
+  background-color: white;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.search::placeholder{
+  color: #0B242F;
+  font-size: 15px;
+  font-weight: 500;
 }
 .head-board button{
   width: 100px;
@@ -125,19 +155,21 @@
   color: white;
   border: none;
   border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .board{
   margin-top: 40px;
 }
 .top-card{
-  width: 370px;
+  width: calc(100%/3 - 60px/3);
   height: 170px;
   background-color: white;
   box-shadow: 0 4.05px 32.4px 13.5px rgb(0 0 0 / 0.05);
   border-radius: 15px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding: 0px 50px;
 }
 .desc-img{
   display: flex;
@@ -145,15 +177,14 @@
   justify-content: center;
 }
 .count  {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 600;
 }
 .desc-count{
-  font-size: 19px;
+  font-size: 16px;
 }
 .card-table{
-  width: 1107px;
-  height: 473px;
+  width: calc(100%-380px);
   background-color: white;
   box-shadow: 0 4.05px 32.4px 13.5px rgb(0 0 0 / 0.05);
   border-radius: 15px;
@@ -163,10 +194,11 @@
   padding: 30px 30px 10px 30px;
 }
 .title-table h3{
+  font-weight: 500;
   margin-bottom: 10px;
 }
 .main-table{
-  padding: 0px 30px;
+  padding: 0px 30px 30px 30px;
 }
 .create-btn{
   background-color: #32E5A8;
@@ -178,18 +210,30 @@
   margin-bottom: 30px;
 }
 .table {
-  border-collapse: collapse;
-  border: 1px solid lightgray;
+  /* border-collapse:collapse; */
+  border: 1px solid lightgray ;
+  border-radius:6px;
   width: 100%;
-  border-radius: 10px;
+}
+th:first-of-type {
+  border-top-left-radius: 6px;
+}
+th:last-of-type {
+  border-top-right-radius: 6px;
+}
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 6px;
+}
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 6px;
 }
 .table th{
-  background-color: #5E72E4;
+  background-color: #0B242F;
   color: white;
   font-weight: 500;
 }
 .table th, td {
-  padding: 8px;
+  padding: 15px 8px;
   text-align: center;
 }
 tr:nth-child(odd) {
@@ -209,10 +253,11 @@ tr:nth-child(odd) {
   padding: 0px 10px;
   border: none;
   border: 5px;
+  border-radius: 5px;
 }
 .edit-btn{
   background-color: #FFC107;
-  color: black;
+  color: #0B242F;
 }
 .delete-btn{
   background-color: #C82333;

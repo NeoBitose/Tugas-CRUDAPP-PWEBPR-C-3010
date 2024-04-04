@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/public/css/style.css">
-  <title>PortHub | Dashboard</title>
+  <title>PortHub | Pengguna</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         </div>
         <div class="nav">
           <ul>
-            <li class="active">
+            <li>
               <a href="/view/dasboard.php" class="nav-link">
                 <i class="icon-nav">
                   <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@
                 Dashboard
               </a>
             </li>
-            <li>
+            <li class="active">
               <a href="/view/pengguna.php" class="nav-link">
                 <i class="icon-nav">
                   <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@
         </div>
         <div class="board">
           <div class="flex-column">
-            <div class="flex-row">
+            <!-- <div class="flex-row">
               <div class="top-card">
                 <div class="desc-card">
                   <div class="flex">
@@ -99,10 +99,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="card-table">
               <div class="title-table">
-                <h3>Table Portofolio</h3>
+                <h3>Table Pengguna</h3>
                 <hr>
               </div>
               <div class="main-table">
@@ -110,63 +110,58 @@
                 <table class="table" cellspacing="0">
                   <tr>
                     <th>No</th>
-                    <th>Judul Portofolio</th>
-                    <th>Link</th>
-                    <th>Tanggal Upload</th>
-                    <th>Nama Pengguna</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>No Hp</th>
                     <th>Aksi</th>
-                  </tr>
                   <tr>
                     <td>1</td>
-                    <td>Website Admin</td>
-                    <td><a href="hmifunej.id">https://website.com</a></td>
-                    <td>4 Mar 2024</td>
+                    <td>neobitose@neo.com</td>
+                    <td>Neobitose</td>
                     <td>Neobitose Ramadhan</td>
+                    <td>22241010XXXX</td>
+                    <td>083-XXX-XXX-XXX</td>
                     <td>
                       <div class="grup-action-btn">
-                        <button class="edit-btn">Edit</button>
                         <button class="delete-btn">Hapus</button></div>
                     </td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>Poster Lingkungan</td>
-                    <td><a href="hajarif.hmihunej.id">https://drive.google.com</a></td>
-                    <td>12 Jan 2024</td>
+                    <td>ramadhanalif430@gmail.com</td>
+                    <td>Alif_ramadhaann</td>
                     <td>Ahmad Alif Ramadhan</td>
+                    <td>222410103010</td>
+                    <td>082-XXX-XXX-XXX</td>
                     <td>
                       <div class="grup-action-btn">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Hapus</button>
-                        <!-- <a href="action-btn"><img src="/public/img/icon/edit.svg" alt=""></a>
-                        <a href="action-btn"><img src="/public/img/icon/trash.svg" alt=""></a> -->
-                      </div>
+                        <button class="delete-btn">Hapus</button></div>
                     </td>
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>Karya Tulis Ilmiah</td>
-                    <td><a href="ifmerch.hmifunej.id">https://drive.google.com</a></td>
-                    <td>30 Feb 2024</td>
+                    <td>nopal_bigzy@gmail.com</td>
+                    <td>Nopal123</td>
                     <td>Nopal Bigzy</td>
+                    <td>22241010XXXX</td>
+                    <td>081-XXX-XXX-XXX</td>
                     <td>
                       <div class="grup-action-btn">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Hapus</button>
-                      </div>
+                        <button class="delete-btn">Hapus</button></div>
                     </td>
                   </tr>
                   <tr>
                     <td>4</td>
-                    <td>Aplikasi Siakad</td>
-                    <td><a href="s.hmifunej.id">https://siakad.com</a></td>
-                    <td>1 Apr 2024</td>
+                    <td>thanos123@gmail.com</td>
+                    <td>Thanos123</td>
                     <td>Thanos</td>
+                    <td>22241010XXXX</td>
+                    <td>085-XXX-XXX-XXX</td>
                     <td>
                       <div class="grup-action-btn">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Hapus</button>
-                      </div>
+                        <button class="delete-btn">Hapus</button></div>
                     </td>
                   </tr>
                 </table>

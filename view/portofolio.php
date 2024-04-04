@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/public/css/style.css">
-  <title>PortHub | Dashboard</title>
+  <title>PortHub | Portofolio</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         </div>
         <div class="nav">
           <ul>
-            <li class="active">
+            <li>
               <a href="/view/dasboard.php" class="nav-link">
                 <i class="icon-nav">
                   <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@
                 Data Pengguna
               </a>
             </li>
-            <li>
+            <li class="active">
               <a href="/view/portofolio.php" class="nav-link">
                 <i class="icon-nav">
                   <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@
         </div>
         <div class="board">
           <div class="flex-column">
-            <div class="flex-row">
+            <!-- <div class="flex-row">
               <div class="top-card">
                 <div class="desc-card">
                   <div class="flex">
@@ -99,7 +99,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="card-table">
               <div class="title-table">
                 <h3>Table Portofolio</h3>
