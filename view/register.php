@@ -23,6 +23,11 @@
             <input class="form-input" type="text" name="email" id="email" autofocus>
             <small class="red-text" id="message-email"></small>
           </div>
+          <div class="email input">
+            <label class="label" for="nohp">No Handphone</label>
+            <input class="form-input" type="tel" name="nohp" id="nohp" autofocus>
+            <small class="red-text" id="message-email"></small>
+          </div>
           <div class="username input">
             <label class="label" for="username">Username</label>
             <input class="form-input" type="text" name="username" id="username">

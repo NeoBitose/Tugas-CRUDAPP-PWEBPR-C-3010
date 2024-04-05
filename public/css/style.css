@@ -116,6 +116,8 @@ button:hover{
   font-size: 14px;
   font-weight: 500;
 }
+
+/* Dashboard Admin */
 .main-board{
   width: calc(100%-380px);
   padding-left: 30px;
@@ -149,14 +151,19 @@ button:hover{
   font-weight: 500;
 }
 .head-board button{
-  width: 100px;
-  height: 36px;
+  width: 120px;
+  height: 40px;
   background-color: #FF6984;
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 16px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
 }
 .board{
   margin-top: 40px;
@@ -177,7 +184,7 @@ button:hover{
   justify-content: center;
 }
 .count  {
-  font-size: 25px;
+  font-size: 32px;
   font-weight: 600;
 }
 .desc-count{
@@ -263,4 +270,30 @@ tr:nth-child(odd) {
   background-color: #C82333;
   color: white;
 }
+.detail-btn{
+  background-color: #8B93FF;
+  color: white;
+}
 
+/* Dashboard User */
+
+.desc-img .btn-profile{
+  width: 100px;
+  height: 36px;
+  background-color: #FFC107;
+  color: #0B242F;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.img-profile{
+  width: auto;
+  height: 100px;
+  border-radius: 50%;
+}
+.name-user{
+  font-size: 24px;
+  font-weight: 600;
+}

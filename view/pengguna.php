@@ -14,7 +14,7 @@
     <div class="content flex-row">
       <div class="sidebar flex-column">
         <div class="title-nav">
-          <h2>PortHub.</h2>
+          <h2>PortHub</h2>
         </div>
         <div class="nav">
           <ul>
@@ -58,55 +58,17 @@
         <div class="head-board">
           <div class="left"><input type="search" name="search" id="search" class="search" placeholder="Search..."></div>
           <div class="right">
-            <a href="/view/login.php">
-              <button>Logout</button>
-            </a>
+            <?php include 'component/top-nav.php'?>
           </div>
         </div>
         <div class="board">
           <div class="flex-column">
-            <!-- <div class="flex-row">
-              <div class="top-card">
-                <div class="desc-card">
-                  <div class="flex">
-                    <img src="/public/img/icon/icon_buttons_blue.png" alt="">
-                    <div class="desc-img">
-                      <p class="count">10</p>
-                      <p class="desc-count">Portofolio Terbaik</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="top-card">
-                <div class="desc-card">
-                  <div class="flex">
-                    <img src="/public/img/icon/icon_buttons_green.png" alt="">
-                    <div class="desc-img">
-                      <p class="count">230</p>
-                      <p class="desc-count">Pengguna Aplikasi</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="top-card">
-                <div class="desc-card">
-                  <div class="flex">
-                    <img src="/public/img/icon/icon_buttons_pink.png" alt="">
-                    <div class="desc-img">
-                      <p class="count">1,530</p>
-                      <p class="desc-count">Portofolio</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
             <div class="card-table">
               <div class="title-table">
                 <h3>Table Pengguna</h3>
                 <hr>
               </div>
               <div class="main-table">
-                <button class="create-btn">Tambah Data</button>
                 <table class="table" cellspacing="0">
                   <tr>
                     <th>No</th>
@@ -125,7 +87,7 @@
                     <td>083-XXX-XXX-XXX</td>
                     <td>
                       <div class="grup-action-btn">
-                        <button class="delete-btn">Hapus</button></div>
+                        <button class="detail-btn">Detail</button></div>
                     </td>
                   </tr>
                   <tr>
@@ -137,7 +99,7 @@
                     <td>082-XXX-XXX-XXX</td>
                     <td>
                       <div class="grup-action-btn">
-                        <button class="delete-btn">Hapus</button></div>
+                        <button class="detail-btn">Detail</button></div>
                     </td>
                   </tr>
                   <tr>
@@ -149,7 +111,7 @@
                     <td>081-XXX-XXX-XXX</td>
                     <td>
                       <div class="grup-action-btn">
-                        <button class="delete-btn">Hapus</button></div>
+                        <button class="detail-btn">Detail</button></div>
                     </td>
                   </tr>
                   <tr>
@@ -161,7 +123,7 @@
                     <td>085-XXX-XXX-XXX</td>
                     <td>
                       <div class="grup-action-btn">
-                        <button class="delete-btn">Hapus</button></div>
+                        <button class="detail-btn">Detail</button></div>
                     </td>
                   </tr>
                 </table>
