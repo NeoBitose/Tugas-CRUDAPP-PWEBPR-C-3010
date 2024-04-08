@@ -4,30 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrasi User</title>
+  <title>Login User</title>
   <link rel="stylesheet" href="/public/css/form-auth.css">
 </head>
 
 <body>
   <div class="container">
     <div class="cover">
-      <form name="form-registrasi" action="/view/user/dashboard.php" method="post" onsubmit="return validateRegis()" class="form">
+      <form name="form-login" action="/views/user/dashboard.php" method="post" onsubmit="return validateLogin()" class="form">
         <div class="head-form">
-          <h1 class="title-form">Selamat Datang!</h1>
-          <span>Silahkan register akun anda</span>
+          <h1 class="title-form">Selamat Datang Kembali!</h1>
+          <span>Silahkan masuk ke akun anda</span>
         </div>
-        <div class="flex"><a href="/view/auth/login.php"><hr class="hr-grey"></a><hr class="hr-violet"></div>
+        <div class="flex"><hr class="hr-violet"><a href="/views/auth/register.php"><hr class="hr-grey"></a></div>
         <div class="main-form">
-          <div class="email input">
-            <label class="label" for="email">Email</label>
-            <input class="form-input" type="text" name="email" id="email" autofocus>
-            <small class="red-text" id="message-email"></small>
-          </div>
-          <div class="email input">
-            <label class="label" for="nohp">No Handphone</label>
-            <input class="form-input" type="tel" name="nohp" id="nohp" autofocus>
-            <small class="red-text" id="message-email"></small>
-          </div>
           <div class="username input">
             <label class="label" for="username">Username</label>
             <input class="form-input" type="text" name="username" id="username">
@@ -39,9 +29,9 @@
             <small class="red-text" id="message-password"></small>
           </div>
           <button type="submit" class="btn-form">Submit</button>
-        </div> 
+        </div>
         <div class="footer-form">
-          <p>Sudah punya akun ? <a href="/view/auth/login.php">Masuk</a></p>
+          <p>Belum punya akun ? <a href="/views/auth/register.php">Daftar</a></p>
         </div>
       </form>
     </div>
