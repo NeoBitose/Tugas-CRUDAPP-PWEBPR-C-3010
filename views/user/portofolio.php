@@ -1,3 +1,7 @@
+<?php 
+  require '../../app/controllers/PortofolioController.php';
+  $rows = PortofolioController::index();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,58 +42,24 @@
                     <th>Nama Pengguna</th>
                     <th>Aksi</th>
                   </tr>
+                  <?php 
+                    for ($i=0; $i < count($rows); $i++) { 
+                  ?>
                   <tr>
                     <td>1</td>
-                    <td>Website Admin</td>
-                    <td><a href="hmifunej.id">https://website.com</a></td>
-                    <td>4 Mar 2024</td>
-                    <td>Neobitose Ramadhan</td>
+                    <td><?= $rows[$i]['nama_porto']; ?></td>
+                    <td><a href="<?= $rows[$i]['link_porto']; ?>"><?= $rows[$i]['link_porto']; ?></a></td>
+                    <td><?= $rows[$i]['tgl_upload']; ?></td>
+                    <td><?= $rows[$i]['username']; ?></td>
                     <td>
                       <div class="grup-action-btn">
                         <button class="edit-btn">Edit</button>
                         <button class="delete-btn">Hapus</button></div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Poster Lingkungan</td>
-                    <td><a href="hajarif.hmihunej.id">https://drive.google.com</a></td>
-                    <td>12 Jan 2024</td>
-                    <td>Ahmad Alif Ramadhan</td>
-                    <td>
-                      <div class="grup-action-btn">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Hapus</button>
-                        <!-- <a href="action-btn"><img src="/public/img/icon/edit.svg" alt=""></a>
-                        <a href="action-btn"><img src="/public/img/icon/trash.svg" alt=""></a> -->
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Karya Tulis Ilmiah</td>
-                    <td><a href="ifmerch.hmifunej.id">https://drive.google.com</a></td>
-                    <td>30 Feb 2024</td>
-                    <td>Nopal Bigzy</td>
-                    <td>
-                      <div class="grup-action-btn">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Hapus</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>Aplikasi Siakad</td>
-                    <td><a href="s.hmifunej.id">https://siakad.com</a></td>
-                    <td>1 Apr 2024</td>
-                    <td>Thanos</td>
-                    <td>
-                      <div class="grup-action-btn">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Hapus</button>
-                      </div>
-                    </td>
+                  <?php 
+                    }
+                  ?>  
                   </tr>
                 </table>
               </div>
