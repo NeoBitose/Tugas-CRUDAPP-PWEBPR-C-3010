@@ -25,7 +25,7 @@
           <div class="flex-column">
           <div class="form-card">
             <div class="head-card">
-              <h3>Tambah Data Portofolio</h3>
+              <h3>Ubah Data Portofolio</h3>
               <hr>
             </div>
             <div class="body-card">

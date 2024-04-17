@@ -53,7 +53,7 @@
                     <td>
                       <div class="grup-action-btn">
                         <a href="/porthub/views/user/update.php?id=<?= $data[$i]['id_porto']?>"><button class="edit-btn">Edit</button></a>
-                        <a href="/porthub/views/user/delete.php?id=<?= $data[$i]['id_porto']?>"><button class="delete-btn">Hapus</button></a>
+                        <a href="/porthub/app/controllers/delete.php?id=<?= $data[$i]['id_porto']?>"><button class="delete-btn" onclick="alert('Apakah anda yakin akan menghapus data ini ?')">Hapus</button></a>
                       </div>
                     </td>
                   </tr>

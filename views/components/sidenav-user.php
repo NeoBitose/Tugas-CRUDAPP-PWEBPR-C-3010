@@ -1,11 +1,11 @@
 <div class="sidebar flex-column">
   <div class="title-nav">
-    <h2>PortHub</h2>
+    <h2>PortoHub</h2>
   </div>
   <div class="nav">
     <ul>
       <li class="<?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : ''; ?>">
-        <a href="/views/user/dashboard.php" class="nav-link">
+        <a href="/porthub/views/user/dashboard.php" class="nav-link">
           <i class="icon-nav">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -26,7 +26,7 @@
                 Dashboard Admin
               </a>
             </li> -->
-      <li class="<?php echo basename($_SERVER['PHP_SELF']) == 'portofolio.php' ? 'active' : ''; ?>">
+      <li class="<?php echo basename($_SERVER['PHP_SELF']) == 'portofolio.php' || 'create.php' || 'update.php' ? 'active' : ''; ?>">
         <a href="/porthub/views/user/portofolio.php" class="nav-link">
           <i class="icon-nav">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
