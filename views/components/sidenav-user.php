@@ -27,7 +27,7 @@
               </a>
             </li> -->
       <li class="<?php echo basename($_SERVER['PHP_SELF']) == 'portofolio.php' ? 'active' : ''; ?>">
-        <a href="/views/user/portofolio.php" class="nav-link">
+        <a href="/porthub/views/user/portofolio.php" class="nav-link">
           <i class="icon-nav">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path

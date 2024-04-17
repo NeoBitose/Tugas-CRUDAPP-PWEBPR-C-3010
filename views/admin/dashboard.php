@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/porthub/views/asset/css/style.css">
   <title>PortHub | Dashboard</title>
 </head>
 
@@ -58,11 +58,11 @@
               </div>
             </div>
             <div class="card-table">
-              <div class="title-table">
+              <div class="head-card">
                 <h3>Table Portofolio</h3>
                 <hr>
               </div>
-              <div class="main-table">
+              <div class="body-card">
                 <table class="table" cellspacing="0">
                   <tr>
                     <th>No</th>

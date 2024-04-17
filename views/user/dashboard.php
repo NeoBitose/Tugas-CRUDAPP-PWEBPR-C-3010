@@ -15,10 +15,7 @@
       <?php include '../components/sidenav-user.php'?>
       <div class="main-board">
         <div class="head-board">
-          <div class="left"><input type="search" name="search" id="search" class="search" placeholder="Search..."></div>
-          <div class="right">
-            <?php include '../components/top-nav.php'?>
-          </div>
+        <?php include '../components/top-nav.php'?>
         </div>
         <div class="board">
           <div class="flex-column">

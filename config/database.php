@@ -1,5 +1,6 @@
 <?php 
 
+$url = 'http://localhost/porthub';
 $host = 'localhost';
 $username = 'root';
 $password = '';

@@ -44,7 +44,7 @@
     <div class="content">
       <h1>500</h1>
       <h2>Terjadi kesalahan internal pada server.</h2>
-      <a href="/">
+      <a href="/porthub">
         <button>Kembali</button>
       </a>
     </div>

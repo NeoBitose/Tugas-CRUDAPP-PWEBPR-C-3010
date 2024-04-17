@@ -1,6 +1,6 @@
 <?php 
-  require '../../app/controllers/PortofolioController.php';
-  $rows = PortofolioController::index();
+  require '../../app/controllers/read.php';
+  global $data;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/views/asset/css/style.css">
+  <link rel="stylesheet" href="/porthub/views/asset/css/style.css">
   <title>PortHub | Portofolio</title>
 </head>
 
@@ -19,20 +19,17 @@
     <?php include '../components/sidenav-user.php'?>
       <div class="main-board">
         <div class="head-board">
-          <div class="left"><input type="search" name="search" id="search" class="search" placeholder="Search..."></div>
-          <div class="right">
-            <?php include '../components/top-nav.php'?>
-          </div>
+          <?php include '../components/top-nav.php'?>
         </div>
         <div class="board">
           <div class="flex-column">
             <div class="card-table">
-              <div class="title-table">
+              <div class="head-card">
                 <h3>Table Portofolio</h3>
                 <hr>
               </div>
-              <div class="main-table">
-                <a href="./create.php">
+              <div class="body-card">
+                <a href="/porthub/views/user/create.php">
                   <button class="create-btn">Tambah Data</button>
                 </a>
                 <table class="table" cellspacing="0">
@@ -45,18 +42,19 @@
                     <th>Aksi</th>
                   </tr>
                   <?php 
-                    for ($i=0; $i < count($rows); $i++) { 
+                    for ($i=0; $i < count($data); $i++) { 
                   ?>
                   <tr>
                     <td>1</td>
-                    <td><?= $rows[$i]['nama_porto']; ?></td>
-                    <td><a href="<?= $rows[$i]['link_porto']; ?>"><?= $rows[$i]['link_porto']; ?></a></td>
-                    <td><?= $rows[$i]['tgl_upload']; ?></td>
-                    <td><?= $rows[$i]['username']; ?></td>
+                    <td><?= $data[$i]['nama_porto']; ?></td>
+                    <td><a href="<?= $data[$i]['link_porto']; ?>"><?= $data[$i]['link_porto']; ?></a></td>
+                    <td><?= $data[$i]['tgl_upload']; ?></td>
+                    <td><?= $data[$i]['username']; ?></td>
                     <td>
                       <div class="grup-action-btn">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Hapus</button></div>
+                        <a href="/porthub/views/user/update.php?id=<?= $data[$i]['id_porto']?>"><button class="edit-btn">Edit</button></a>
+                        <a href="/porthub/views/user/delete.php?id=<?= $data[$i]['id_porto']?>"><button class="delete-btn">Hapus</button></a>
+                      </div>
                     </td>
                   </tr>
                   <?php 

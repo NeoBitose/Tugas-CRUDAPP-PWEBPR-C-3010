@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registrasi User</title>
-  <link rel="stylesheet" href="/views/asset/css/form-auth.css">
+  <link rel="stylesheet" href="/porthub/views/asset/css/form-auth.css">
 </head>
 
 <body>
   <div class="container">
     <div class="cover">
-      <form name="form-registrasi" action="/views/user/dashboard.php" method="post" onsubmit="return validateRegis()" class="form">
+      <form name="form-registrasi" action="/porthub/views/user/dashboard.php" method="post" onsubmit="return validateRegis()" class="form">
         <div class="head-form">
           <h1 class="title-form">Selamat Datang!</h1>
           <span>Silahkan register akun anda</span>
         </div>
-        <div class="flex"><a href="/views/auth/login.php"><hr class="hr-grey"></a><hr class="hr-violet"></div>
+        <div class="flex"><a href="/porthub/views/auth/login.php"><hr class="hr-grey"></a><hr class="hr-violet"></div>
         <div class="main-form">
           <div class="email input">
             <label class="label" for="email">Email</label>
@@ -41,7 +41,7 @@
           <button type="submit" class="btn-form">Submit</button>
         </div> 
         <div class="footer-form">
-          <p>Sudah punya akun ? <a href="/views/auth/login.php">Masuk</a></p>
+          <p>Sudah punya akun ? <a href="/porthub/views/auth/login.php">Masuk</a></p>
         </div>
       </form>
     </div>
