@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/views/asset/css/style.css">
   <title>PortHub | Portofolio</title>
 </head>
 
@@ -32,7 +32,9 @@
                 <hr>
               </div>
               <div class="main-table">
-                <button class="create-btn">Tambah Data</button>
+                <a href="./create.php">
+                  <button class="create-btn">Tambah Data</button>
+                </a>
                 <table class="table" cellspacing="0">
                   <tr>
                     <th>No</th>

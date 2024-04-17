@@ -297,3 +297,26 @@ tr:nth-child(odd) {
   font-size: 24px;
   font-weight: 600;
 }
+.card-create{
+  width: calc(100%-380px);
+  background-color: white;
+  box-shadow: 0 4.05px 32.4px 13.5px rgb(0 0 0 / 0.05);
+  border-radius: 15px;
+}
+.card-form{
+  width: calc(100%-380px);
+  background-color: white;
+  box-shadow: 0 4.05px 32.4px 13.5px rgb(0 0 0 / 0.05);
+  border-radius: 15px;
+}
+.title-card-form{
+  height: 50px;
+  padding: 30px 30px 10px 30px;
+}
+.title-card-form h3{
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.main-card-form{
+  padding: 0px 30px 30px 30px;
+}
