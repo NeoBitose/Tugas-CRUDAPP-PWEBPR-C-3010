@@ -1,6 +1,6 @@
 <?php 
-  require '../../app/controllers/detail.php';
-  global $data;
+  require '../../app/controllers/PortofolioController.php';
+  $data = PortofolioController::detail($_GET['id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@
               <hr>
             </div>
             <div class="body-card">
-              <form action="/porthub/app/controllers/update.php" method="POST" class="form">
+              <form action="/porthub/app/controllers/update.php?action='update'" method="POST" class="form">
 
                 <label for="judul">Judul Portofolio</label>
                 <input class="input" name="judul" id="judul" type="text" value="<?= $data->nama_porto ?>">

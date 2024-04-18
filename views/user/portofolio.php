@@ -1,6 +1,6 @@
 <?php 
-  require '../../app/controllers/read.php';
-  global $data;
+  require '../../app/controllers/PortofolioController.php';
+  $data = PortofolioController::index();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,8 +52,12 @@
                     <td><?= $data[$i]['username']; ?></td>
                     <td>
                       <div class="grup-action-btn">
-                        <a href="/porthub/views/user/update.php?id=<?= $data[$i]['id_porto']?>"><button class="edit-btn">Edit</button></a>
-                        <a href="/porthub/app/controllers/delete.php?id=<?= $data[$i]['id_porto']?>"><button class="delete-btn" onclick="alert('Apakah anda yakin akan menghapus data ini ?')">Hapus</button></a>
+                        <a href="/porthub/views/user/update.php?id=<?= $data[$i]['id_porto']?>">
+                          <button class="edit-btn">Edit</button>
+                        </a>
+                        <a href="/porthub/app/controllers/PortofolioController.php?action=delete&id=<?= $data[$i]['id_porto']?>" onclick="return confirm('Are you sure you want to delete this item?');">
+                          <button class="delete-btn">Hapus</button>
+                        </a>
                       </div>
                     </td>
                   </tr>
