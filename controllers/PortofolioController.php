@@ -2,18 +2,7 @@
 require_once "models/PortofolioModel.php";
 require_once "function/function.php";
 
-// if(isset($_GET['action']) and $_GET['action'] == 'create') {
-//   PortofolioController::create();
-// }
-// else if(isset($_GET['action']) and $_GET['action'] == 'update') {
-//   PortofolioController::update();
-// }
-// else if(isset($_GET['action']) and $_GET['action'] == 'delete') {
-//   PortofolioController::delete();
-// } 
-
 class PortofolioController{
-
   
   public function index(){
     $data = PortofolioModel::read();
