@@ -36,9 +36,9 @@ class PortofolioController{
     header("Location:".$url."/portofolio");
   }
 
-  public function delete(){
+  public function delete($id){
     global $url;
-    $data = PortofolioModel::delete($_GET["id"]);
-    header("Location:".$url."/views/user/portofolio.php");
+    $data = PortofolioModel::delete($id);
+    header("Location:".$url."/portofolio");
   }
 }

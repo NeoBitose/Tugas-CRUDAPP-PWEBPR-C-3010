@@ -41,7 +41,7 @@
                     for ($i=0; $i < count($data); $i++) { 
                   ?>
                   <tr>
-                    <td>1</td>
+                    <td><?= $i+1?></td>
                     <td><?= $data[$i]['nama_porto']; ?></td>
                     <td><a href="<?= $data[$i]['link_porto']; ?>"><?= $data[$i]['link_porto']; ?></a></td>
                     <td><?= $data[$i]['tgl_upload']; ?></td>
@@ -51,7 +51,7 @@
                         <a href="/porthub/portofolioupdate/<?= $data[$i]['id_porto']?>">
                           <button class="edit-btn">Edit</button>
                         </a>
-                        <a href="/porthub/app/controllers/PortofolioController.php?action=delete&id=<?= $data[$i]['id_porto']?>" onclick="return confirm('Are you sure you want to delete this item?');">
+                        <a href="/porthub/deleteporto/<?= $data[$i]['id_porto']?>" onclick="return confirm('Are you sure you want to delete this item?');">
                           <button class="delete-btn">Hapus</button>
                         </a>
                       </div>

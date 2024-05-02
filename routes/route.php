@@ -12,5 +12,5 @@ $routes['GET']['/portofolioupdate/{id}'] = 'PortofolioController@formupdate';
 // $routes['GET']['/detailporto/{id}'] = 'PortofolioController@detail';
 $routes['POST']['/createporto'] = 'PortofolioController@create';
 $routes['POST']['/updateporto/{id}'] = 'PortofolioController@update';
-
+$routes['GET']['/deleteporto/{id}'] = 'PortofolioController@delete';
 ?>
