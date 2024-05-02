@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +13,10 @@
   <div class="container">
     <div class="bg"></div>
     <div class="content flex-row">
-    <?php include '../components/sidenav-user.php'?>
+    <?php include 'components/sidenav-user.php'?>
       <div class="main-board">
         <div class="head-board">
-          <?php include '../components/top-nav.php'?>
+          <?php include 'components/top-nav.php'?>
         </div>
         <div class="board">
           <div class="flex-column">

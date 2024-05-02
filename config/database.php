@@ -1,6 +1,7 @@
 <?php 
 
-$url = 'http://localhost/porthub';
+$app_name = 'porthub';
+$url = 'http://localhost/'.$app_name;
 $host = 'localhost';
 $username = 'root';
 $password = '';
@@ -10,6 +11,6 @@ try {
   $conn = new mysqli($host, $username, $password, $database);
 } catch (\Throwable $e) {
 
-  header('Location: http://localhost/views/errors/500.php?message="'.$e.'"');
+  header('Location: '.$url.'/views/errors/500.php?message="'.$e.'"');
 }
 

@@ -1,7 +1,3 @@
-<?php 
-  require '../../app/controllers/PortofolioController.php';
-  $data = PortofolioController::index();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,10 +12,10 @@
   <div class="container">
     <div class="bg"></div>
     <div class="content flex-row">
-    <?php include '../components/sidenav-user.php'?>
+    <?php include 'views/components/sidenav-user.php'?>
       <div class="main-board">
         <div class="head-board">
-          <?php include '../components/top-nav.php'?>
+          <?php include 'views/components/top-nav.php'?>
         </div>
         <div class="board">
           <div class="flex-column">
@@ -29,7 +25,7 @@
                 <hr>
               </div>
               <div class="body-card">
-                <a href="/porthub/views/user/create.php">
+                <a href="/porthub/portofoliocreate">
                   <button class="create-btn">Tambah Data</button>
                 </a>
                 <table class="table" cellspacing="0">

@@ -1,10 +1,13 @@
+<?php 
+  require '../controllers/PortofolioController.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/porthub/views/asset/css/style.css">
+  <link rel="stylesheet" href="/<?= $app_name ?>/views/asset/css/style.css">
   <title>PortHub | Dashboard</title>
 </head>
 
@@ -12,10 +15,10 @@
   <div class="container">
     <div class="bg"></div>
     <div class="content flex-row">
-      <?php include '../components/sidenav-user.php'?>
+      <?php include 'views/components/sidenav-user.php'?>
       <div class="main-board">
         <div class="head-board">
-        <?php include '../components/top-nav.php'?>
+        <?php include 'views/components/top-nav.php'?>
         </div>
         <div class="board">
           <div class="flex-column">
@@ -23,7 +26,7 @@
               <div class="top-card">
                 <div class="desc-card">
                   <div class="flex">
-                    <img src="/public/img/pp.jpeg" alt="" class="img-profile">
+                    <img src="/<?= $app_name ?>/views/asset/img/pp.jpeg" alt="" class="img-profile">
                     <div class="desc-img">
                       <p class="name-user">Neobitose</p>
                       <p class="desc-count">neobitose@neo.com</p>
@@ -35,7 +38,7 @@
               <div class="top-card">
                 <div class="desc-card">
                   <div class="flex">
-                    <img src="/public/img/icon/icon_buttons_pink.png" alt="">
+                    <img src="/<?= $app_name ?>/views/asset/img/icon/icon_buttons_pink.png" alt="">
                     <div class="desc-img">
                       <p class="count">150</p>
                       <p class="desc-count">Portofolio</p>

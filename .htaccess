@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /contact-app/
+RewriteRule ^index\\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /porthub/index.php [L]
