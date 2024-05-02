@@ -1,14 +1,10 @@
-<?php 
-  require '../controllers/PortofolioController.php';
-  $data = PortofolioController::detail($_GET['id']);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/<?= $app_name ?>/views/asset/css/style.css">
+  <link rel="stylesheet" href="/porthub/views/asset/css/style.css">
   <title>PortHub | Portofolio</title>
 </head>
 
@@ -16,10 +12,10 @@
   <div class="container">
     <div class="bg"></div>
     <div class="content flex-row">
-    <?php include '../components/sidenav-user.php'?>
+    <?php include 'components/sidenav-user.php'?>
       <div class="main-board">
         <div class="head-board">
-          <?php include '../components/top-nav.php'?>
+          <?php include 'components/top-nav.php'?>
         </div>
         <div class="board">
           <div class="flex-column">
@@ -29,17 +25,17 @@
               <hr>
             </div>
             <div class="body-card">
-              <form action="/porthub/app/controllers/PortofolioController.php?action=update" method="POST" class="form">
+              <form action="/porthub/updateporto/<?= $data[0]['id_porto'] ?>" method="POST" class="form">
 
                 <label for="judul">Judul Portofolio</label>
-                <input class="input" name="judul" id="judul" type="text" value="<?= $data->nama_porto ?>">
+                <input class="input" name="judul" id="judul" type="text" value="<?= $data[0]['nama_porto'] ?>">
                 <label for="deskripsi">Deskripsi Portofolio</label>
-                <textarea class="input-text" name="deskripsi" id="deskripsi" cols="30" rows="3"><?= $data->deskripsi_porto ?></textarea>
+                <textarea class="input-text" name="deskripsi" id="deskripsi" cols="30" rows="3"><?= $data[0]['deskripsi_porto'] ?></textarea>
                 <label for="link">Link Portofolio</label>
-                <input class="input" name="link" id="link" type="text" value="<?= $data->link_porto ?>">
+                <input class="input" name="link" id="link" type="text" value="<?= $data[0]['link_porto'] ?>">
                 <label for="tanggal">Tanggal Upload</label>
-                <input class="input" name="tanggal" id="tanggal" type="date" value="<?= $data->tgl_upload ?>">
-                <input type="hidden" name="id" value="<?= $data->id_porto ?>">
+                <input class="input" name="tanggal" id="tanggal" type="date" value="<?= $data[0]['tgl_upload'] ?>">
+                <input type="hidden" name="id" value="<?= $data[0]['id_porto'] ?>">
                 <br>
                 <button class="button-submit" type="submit">Kirim</button>
               </form>

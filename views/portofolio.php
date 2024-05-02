@@ -48,7 +48,7 @@
                     <td><?= $data[$i]['username']; ?></td>
                     <td>
                       <div class="grup-action-btn">
-                        <a href="/porthub/views/user/update.php?id=<?= $data[$i]['id_porto']?>">
+                        <a href="/porthub/portofolioupdate/<?= $data[$i]['id_porto']?>">
                           <button class="edit-btn">Edit</button>
                         </a>
                         <a href="/porthub/app/controllers/PortofolioController.php?action=delete&id=<?= $data[$i]['id_porto']?>" onclick="return confirm('Are you sure you want to delete this item?');">

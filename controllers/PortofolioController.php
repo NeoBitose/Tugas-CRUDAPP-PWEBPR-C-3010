@@ -24,10 +24,16 @@ class PortofolioController{
     return $data;
   }
 
-  public function update(){
+  public function formupdate($id){
+    // die($id);
+    $data = PortofolioModel::detail($id);
+    loadView('updateporto', $data);
+  }
+
+  public function update($id){
     global $url;
-    $data = PortofolioModel::update($_POST["id"],$_POST["judul"],$_POST["deskripsi"],$_POST["link"],$_POST["tanggal"]);
-    header("Location:".$url."/views/user/portofolio.php");
+    $data = PortofolioModel::update($id,$_POST["judul"],$_POST["deskripsi"],$_POST["link"],$_POST["tanggal"]);
+    header("Location:".$url."/portofolio");
   }
 
   public function delete(){

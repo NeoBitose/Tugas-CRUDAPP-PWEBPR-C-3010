@@ -6,8 +6,11 @@
 $routes = [];
 
 // Rute dengan parameter
-$routes['/portofolio'] = 'PortofolioController@index';
-$routes['/portofoliocreate'] = 'PortofolioController@formcreate';
-$routes['/portofolio/{id}'] = 'PortofolioController@detail';
+$routes['GET']['/portofolio'] = 'PortofolioController@index';
+$routes['GET']['/portofoliocreate'] = 'PortofolioController@formcreate';
+$routes['GET']['/portofolioupdate/{id}'] = 'PortofolioController@formupdate';
+// $routes['GET']['/detailporto/{id}'] = 'PortofolioController@detail';
+$routes['POST']['/createporto'] = 'PortofolioController@create';
+$routes['POST']['/updateporto/{id}'] = 'PortofolioController@update';
 
 ?>

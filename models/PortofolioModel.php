@@ -33,7 +33,9 @@ class PortofolioModel{
     $query = "select * from portofolio WHERE id_porto=".$id;
     $result = mysqli_query($conn, $query);
     if ($result->num_rows > 0) {
-      $data = mysqli_fetch_object($result);
+      while($a = $result->fetch_array()) {
+        $data[]=$a;
+      }
     }
     else { 
       $data = [];
