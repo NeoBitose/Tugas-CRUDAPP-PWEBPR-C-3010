@@ -24,8 +24,8 @@ class PortofolioController{
     header("Location:".$url."/views/user/portofolio.php");
   }
 
-  public static function detail(){
-    $data = PortofolioModel::detail($_GET["id"]);
+  public static function detail($id){
+    $data = PortofolioModel::detail($id);
     return $data;
   }
 
