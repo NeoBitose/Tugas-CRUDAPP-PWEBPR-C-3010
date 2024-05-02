@@ -16,7 +16,7 @@ class PortofolioController{
   public function create(){
     global $url;
     $data = PortofolioModel::create($_POST["judul"],$_POST["deskripsi"],$_POST["link"],$_POST["tanggal"]);
-    header("Location:".$url."/views/user/portofolio.php");
+    header("Location:".$url."/portofolio");
   }
 
   public function detail($id){
