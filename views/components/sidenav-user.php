@@ -1,11 +1,12 @@
 <div class="sidebar flex-column">
   <div class="title-nav">
     <h2>PortoHub</h2>
+    <?= str_replace('/porthub', '', $_SERVER['REQUEST_URI']);?>
   </div>
   <div class="nav">
     <ul>
-      <li class="<?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : ''; ?>">
-        <a href="/porthub/views/dashboard.php" class="nav-link">
+      <li class="<?php echo str_replace('/porthub', '', $_SERVER['REQUEST_URI']) == '/' ? 'active' : ''; ?>">
+        <a href="/porthub" class="nav-link">
           <i class="icon-nav">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -26,7 +27,7 @@
                 Dashboard Admin
               </a>
             </li> -->
-      <li class="<?php echo basename($_SERVER['PHP_SELF']) == 'portofolio.php' || basename($_SERVER['PHP_SELF']) == 'create.php' || basename($_SERVER['PHP_SELF']) == 'update.php' ? 'active' : ''; ?>">
+      <li class="<?php echo str_replace('/porthub', '', $_SERVER['REQUEST_URI']) == '/portofolio' || str_replace('/porthub', '', $_SERVER['REQUEST_URI']) == '/portofoliocreate' || str_replace('/porthub', '', $_SERVER['REQUEST_URI']) == '/portofolioupdate' ? 'active' : ''; ?>">
         <a href="/porthub/portofolio" class="nav-link">
           <i class="icon-nav">
             <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">

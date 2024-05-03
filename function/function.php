@@ -1,6 +1,6 @@
 <?php 
 function loadView($viewName, $data = []) {
-  extract($data); // Extract data agar bisa diakses langsung dari view
+  extract($data);
   require_once 'views/' . $viewName . '.php';
 }
 ?>
