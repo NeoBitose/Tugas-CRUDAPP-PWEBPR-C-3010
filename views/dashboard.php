@@ -23,7 +23,7 @@
               <div class="top-card">
                 <div class="desc-card">
                   <div class="flex">
-                    <img src="/<?= $app_name ?>/views/asset/img/pp.jpeg" alt="" class="img-profile">
+                    <img src="views/asset/img/pp.jpeg" alt="" class="img-profile">
                     <div class="desc-img">
                       <p class="name-user">Neobitose</p>
                       <p class="desc-count">neobitose@neo.com</p>
@@ -35,7 +35,7 @@
               <div class="top-card">
                 <div class="desc-card">
                   <div class="flex">
-                    <img src="/<?= $app_name ?>/views/asset/img/icon/icon_buttons_pink.png" alt="">
+                    <img src="views/asset/img/icon/icon_buttons_pink.png" alt="">
                     <div class="desc-img">
                       <p class="count">150</p>
                       <p class="desc-count">Portofolio</p>
