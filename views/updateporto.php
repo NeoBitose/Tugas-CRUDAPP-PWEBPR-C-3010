@@ -25,7 +25,7 @@
               <hr>
             </div>
             <div class="body-card">
-              <form action="/porthub/updateporto/<?= $data[0]['id_porto'] ?>" method="POST" class="form">
+              <form action="/porthub/updateporto/<?= $data[0]['id_porto'] ?>" method="POST" class="form" enctype="multipart/form-data">
 
                 <label for="judul">Judul Portofolio</label>
                 <input class="input" name="judul" id="judul" type="text" value="<?= $data[0]['nama_porto'] ?>">
@@ -36,6 +36,10 @@
                 <label for="tanggal">Tanggal Upload</label>
                 <input class="input" name="tanggal" id="tanggal" type="date" value="<?= $data[0]['tgl_upload'] ?>">
                 <input type="hidden" name="id" value="<?= $data[0]['id_porto'] ?>">
+                <label for="gambar">Gambar Upload</label>
+                <input class="input" name="gambar" id="gambar" type="file">
+                <p>Preview gambar : </p>
+                <img id="img-preview" width="150" src="#" alt="">
                 <br>
                 <button class="button-submit" type="submit">Kirim</button>
               </form>
@@ -46,6 +50,7 @@
       </div>
     </div>
   </div>
+  <script src="/porthub/views/asset/js/app.js"></script>
 </body>
 
 </html>

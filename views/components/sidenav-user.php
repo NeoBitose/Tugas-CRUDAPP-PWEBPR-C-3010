@@ -1,7 +1,6 @@
 <div class="sidebar flex-column">
   <div class="title-nav">
     <h2>PortoHub</h2>
-    <?= str_replace('/porthub', '', $_SERVER['REQUEST_URI']);?>
   </div>
   <div class="nav">
     <ul>

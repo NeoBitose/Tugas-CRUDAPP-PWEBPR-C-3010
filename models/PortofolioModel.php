@@ -1,5 +1,4 @@
 <?php
-
 require_once 'config/database.php';
 
 class PortofolioModel{
@@ -17,11 +16,11 @@ class PortofolioModel{
     return $data;
   }
 
-  static function create($nama, $deskripsi, $link, $tgl, $id=2){
+  static function create($nama, $deskripsi, $link, $tgl, $gambar, $id=2){
     global $conn;
-    $query = "insert into portofolio (nama_porto, deskripsi_porto, link_porto, tgl_upload, user_id) values (?,?,?,?,?)";
+    $query = "insert into portofolio (nama_porto, deskripsi_porto, link_porto, tgl_upload, gambar_porto, user_id) values (?,?,?,?,?,?)";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssssi", $nama, $deskripsi, $link, $tgl, $id);
+    $stmt->bind_param("sssssi", htmlspecialchars($nama), htmlspecialchars($deskripsi), htmlspecialchars($link), htmlspecialchars($tgl), $gambar, $id);
     $stmt->execute();
     $result = $stmt->affected_rows > 0 ? true : false;
     $stmt->close();
@@ -43,14 +42,24 @@ class PortofolioModel{
     return $data;
   }
 
-  static function update($id, $nama, $deskripsi, $link, $tgl){
+  static function update($id, $nama, $deskripsi, $link, $tgl, $file){
     global $conn;
-    $stmt = $conn->prepare("update portofolio set nama_porto=?, deskripsi_porto=?, link_porto=?, tgl_upload=? WHERE id_porto=".$id);
-    $stmt->bind_param("ssss", $nama, $deskripsi, $link, $tgl);
-    $stmt->execute();
-    $result = $stmt->affected_rows > 0 ? true : false;
-    $stmt->close();
-    return $result;
+    if ($file != null) {
+      $stmt = $conn->prepare("update portofolio set nama_porto=?, deskripsi_porto=?, link_porto=?, tgl_upload=?, gambar_porto=? WHERE id_porto=".$id);
+      $stmt->bind_param("sssss", htmlspecialchars($nama), htmlspecialchars($deskripsi), htmlspecialchars($link), htmlspecialchars($tgl), $file);
+      $stmt->execute();
+      $result = $stmt->affected_rows > 0 ? true : false;
+      $stmt->close();
+      return $result;
+    } 
+    else {
+      $stmt = $conn->prepare("update portofolio set nama_porto=?, deskripsi_porto=?, link_porto=?, tgl_upload=? WHERE id_porto=".$id);
+      $stmt->bind_param("ssss", htmlspecialchars($nama), htmlspecialchars($deskripsi), htmlspecialchars($link), htmlspecialchars($tgl));
+      $stmt->execute();
+      $result = $stmt->affected_rows > 0 ? true : false;
+      $stmt->close();
+      return $result;
+    }
   }
 
   static function delete($id){

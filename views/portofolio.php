@@ -34,6 +34,7 @@
                     <th>Judul Portofolio</th>
                     <th>Link</th>
                     <th>Tanggal Upload</th>
+                    <th>Gambar</th>
                     <th>Nama Pengguna</th>
                     <th>Aksi</th>
                   </tr>
@@ -45,6 +46,7 @@
                     <td><?= $data[$i]['nama_porto']; ?></td>
                     <td><a href="<?= $data[$i]['link_porto']; ?>"><?= $data[$i]['link_porto']; ?></a></td>
                     <td><?= $data[$i]['tgl_upload']; ?></td>
+                    <td><img src="views/asset/img/<?= $data[$i]['gambar_porto']; ?>" alt="" width="150"></td>
                     <td><?= $data[$i]['username']; ?></td>
                     <td>
                       <div class="grup-action-btn">

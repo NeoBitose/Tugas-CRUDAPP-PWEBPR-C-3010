@@ -25,7 +25,7 @@
               <hr>
             </div>
             <div class="body-card">
-              <form action="createporto" method="POST" class="form">
+              <form action="createporto" method="POST" class="form" enctype="multipart/form-data">
                 <label for="judul">Judul Portofolio</label>
                 <input class="input" name="judul" id="judul" type="text">
                 <label for="deskripsi">Deskripsi Portofolio</label>
@@ -34,6 +34,10 @@
                 <input class="input" name="link" id="link" type="text">
                 <label for="tanggal">Tanggal Upload</label>
                 <input class="input" name="tanggal" id="tanggal" type="date">
+                <label for="gambar">Gambar Upload</label>
+                <input class="input" name="gambar" id="gambar" type="file">
+                <p>Preview gambar : </p>
+                <img id="img-preview" width="150" src="#" alt="">
                 <br>
                 <button class="button-submit" type="submit">Kirim</button>
               </form>
@@ -44,6 +48,7 @@
       </div>
     </div>
   </div>
+  <script src="views/asset/js/app.js"></script>
 </body>
 
 </html>
