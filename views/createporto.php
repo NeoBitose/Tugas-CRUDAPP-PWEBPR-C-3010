@@ -25,7 +25,7 @@
               <hr>
             </div>
             <div class="body-card">
-              <form action="/porthub/createporto" method="POST" class="form">
+              <form action="createporto" method="POST" class="form">
                 <label for="judul">Judul Portofolio</label>
                 <input class="input" name="judul" id="judul" type="text">
                 <label for="deskripsi">Deskripsi Portofolio</label>

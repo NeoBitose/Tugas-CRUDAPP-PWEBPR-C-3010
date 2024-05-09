@@ -11,7 +11,6 @@ $database = $_ENV['DB_NAME'];
 try {
   $conn = new mysqli($host, $username, $password, $database);
 } catch (\Throwable $e) {
-
-  header('Location: '.$url.'/views/errors/500.php?message="'.$e.'"');
+  $loc = 'Location: '.$url.'/views/errors/500.php?message='.$e;
+  header($loc);
 }
-

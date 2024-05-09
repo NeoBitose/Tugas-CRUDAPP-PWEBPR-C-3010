@@ -25,7 +25,7 @@
                 <hr>
               </div>
               <div class="body-card">
-                <a href="/porthub/portofoliocreate">
+                <a href="portofoliocreate">
                   <button class="create-btn">Tambah Data</button>
                 </a>
                 <table class="table" cellspacing="0">
@@ -48,10 +48,10 @@
                     <td><?= $data[$i]['username']; ?></td>
                     <td>
                       <div class="grup-action-btn">
-                        <a href="/porthub/portofolioupdate/<?= $data[$i]['id_porto']?>">
+                        <a href="portofolioupdate/<?= $data[$i]['id_porto']?>">
                           <button class="edit-btn">Edit</button>
                         </a>
-                        <a href="/porthub/deleteporto/<?= $data[$i]['id_porto']?>" onclick="return confirm('Are you sure you want to delete this item?');">
+                        <a href="deleteporto/<?= $data[$i]['id_porto']?>" onclick="return confirm('Are you sure you want to delete this item?');">
                           <button class="delete-btn">Hapus</button>
                         </a>
                       </div>
