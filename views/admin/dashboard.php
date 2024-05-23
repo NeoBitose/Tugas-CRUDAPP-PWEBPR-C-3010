@@ -12,12 +12,12 @@
   <div class="container">
     <div class="bg"></div>
     <div class="content flex-row">
-      <?php include '../components/sidenav-admin.php'?>
+      <?php include '/views/components/sidenav-admin.php'?>
       <div class="main-board">
         <div class="head-board">
           <div class="left"><input type="search" name="search" id="search" class="search" placeholder="Search..."></div>
           <div class="right">
-            <?php include '../components/top-nav.php'?>
+            <?php include '/views/components/top-nav.php'?>
           </div>
         </div>
         <div class="board">

@@ -4,13 +4,24 @@ require_once "function/function.php";
 
 class PortofolioController{
   
+  public function __construct()
+  {
+    global $url;
+    session_start();
+    if(!isset($_SESSION['is_auth']))
+    {
+      echo "<script>window.location.href = '".$url."/login'</script>";
+      exit();
+    }
+  }
+
   public function index(){
     $data = PortofolioModel::read();
-    loadView('portofolio', $data);
+    loadView('portofolio/index', $data);
   }
 
   public function formcreate(){
-    loadView('createporto');
+    loadView('portofolio/create');
   }
 
   public function create(){
@@ -69,7 +80,7 @@ class PortofolioController{
 
   public function formupdate($id){
     $data = PortofolioModel::detail($id);
-    loadView('updateporto', $data);
+    loadView('portofolio/update', $data);
   }
 
   public function update($id){

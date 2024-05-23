@@ -53,7 +53,7 @@
                         <a href="portofolioupdate/<?= $data[$i]['id_porto']?>">
                           <button class="edit-btn">Edit</button>
                         </a>
-                        <a href="deleteporto/<?= $data[$i]['id_porto']?>" onclick="return confirm('Are you sure you want to delete this item?');">
+                        <a href="deleteporto/<?= $data[$i]['id_porto']?>" onclick="return confirm('Apakah anda yakin menghapus item ini?');">
                           <button class="delete-btn">Hapus</button>
                         </a>
                       </div>
