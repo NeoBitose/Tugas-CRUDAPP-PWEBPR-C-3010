@@ -26,24 +26,24 @@ class AuthController{
   static function login(){
     global $url;
     if (empty($_POST["username"])) {
-      echo "<script>alert('Kolom username tidak boleh kosong');window.location.href = '".$url."/login'</script>";
+      echo "<script>alert('Username tidak boleh kosong');window.location.href = '".$url."/login'</script>";
       exit(); 
     } 
     else if (empty($_POST["password"])) {
-      echo "<script>alert('Kolom password tidak boleh kosong');window.location.href = '".$url."/login'</script>";
+      echo "<script>alert('Password tidak boleh kosong');window.location.href = '".$url."/login'</script>";
       exit();
     }
     if (strlen($_POST["password"]) < 8) {
-      echo("<script>alert('Kolom judul minimal input 8 karakter');window.location.href = '".$url."/login'</script>");
+      echo("<script>alert('Judul minimal input 8 karakter');window.location.href = '".$url."/login'</script>");
       exit();
     }
     $data = AuthModel::getdata($_POST["username"]);
     if ($_POST["username"] != $data[0]['username']) {
-      echo("<script>alert('Kolom username salah');window.location.href = '".$url."/login'</script>");
+      echo("<script>alert('Username salah');window.location.href = '".$url."/login'</script>");
       exit();
     }
     if ($_POST["password"] != $data[0]['password']) {
-      echo("<script>alert('Kolom password salah');window.location.href = '".$url."/login'</script>");
+      echo("<script>alert('Password salah');window.location.href = '".$url."/login'</script>");
       exit();
     }
     session_start();
@@ -58,24 +58,24 @@ class AuthController{
   static function register(){
     global $url;
     if (empty($_POST["username"])) {
-      echo "<script>alert('Kolom username tidak boleh kosong');window.location.href = '".$url."/register'</script>";
+      echo "<script>alert('Username tidak boleh kosong');window.location.href = '".$url."/register'</script>";
       exit(); 
     } 
     else if (empty($_POST["password"])) {
-      echo "<script>alert('Kolom password tidak boleh kosong');window.location.href = '".$url."/register'</script>";
+      echo "<script>alert('Password tidak boleh kosong');window.location.href = '".$url."/register'</script>";
       exit();
     }
     else if (empty($_POST["email"])) {
-      echo "<script>alert('Kolom email tidak boleh kosong');window.location.href = '".$url."/register'</script>";
+      echo "<script>alert('Email tidak boleh kosong');window.location.href = '".$url."/register'</script>";
       exit();
     }
     if (strlen($_POST["password"]) < 8) {
-      echo("<script>alert('Kolom judul minimal input 8 karakter');window.location.href = '".$url."/register'</script>");
+      echo("<script>alert('Password minimal input 8 karakter');window.location.href = '".$url."/register'</script>");
       exit();
     }
     $data = AuthModel::getdata($_POST["username"]);
     if ($data[0]['username'] != "") {
-      echo("<script>alert('Uesrname sudah dipakai!');window.location.href = '".$url."/register'</script>");
+      echo("<script>alert('Username sudah dipakai!');window.location.href = '".$url."/register'</script>");
       exit();
     }
     $result = AuthModel::register($_POST['email'], $_POST['username'], $_POST['password']);
